@@ -35,10 +35,18 @@ message("CMAKE_SOURCE_DIR dir : " $ENV{CMAKE_SOURCE_DIR})
 set (EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR})
 set (LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 
+option(USE_CPU "Use cpu/gpu math implementation" ON)
+
+configure_file (
+  "${PROJECT_SOURCE_DIR}/matrix.hpp.in"
+  "${PROJECT_BINARY_DIR}/matrix.hpp"
+)
+
 # 需包含的头文件
 INCLUDE_DIRECTORIES(
 	${PROJECT_SOURCE_DIR}/include
 	/usr/include/eigen3
+	${PROJECT_BINARY_DIR} #matrix.hpp
 )
 
 # 需包含的库文件

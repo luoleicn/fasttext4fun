@@ -1,0 +1,14 @@
+#cmakedefine USE_CPU
+
+#ifdef USE_CPU
+
+#include "cpu/cpu_mat.hpp"
+
+#endif
+
+
+#ifndef USE_CPU
+
+#include "gpu/gpu_mat.hpp"
+
+#endif

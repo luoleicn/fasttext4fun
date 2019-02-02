@@ -2,12 +2,8 @@
 ### 代码结构
 
 ```
-|- tools
-    |- text2feature.py 
-    |- hierarchical_label_builder.py
-    |- train_val_test.py
+|- matrix.hpp.in 通过make指定编译cpu还是gpu版本
 |- include
-    |- matrix.hpp
     |- mat_factory.hpp
     |- data_loader.hpp
     |- model.hpp
@@ -30,6 +26,10 @@
     |- data_loader.cpp
     |- acc_evaluator.cpp
 |- test 
+|- tools
+    |- text2feature.py 
+    |- hierarchical_label_builder.py
+    |- train_val_test.py
 ```
 
 #### 设计原则
@@ -42,8 +42,12 @@
 ### 依赖
 
 + google test(https://github.com/google/googletest)
-	+ version:1.7.0
+	+ version:1.8.0
 	+ 用于单元测试
+
++ eigen
+	+ version 3.3.4-4
+	+ 用于cpu的矩阵计算加速
 
 + 验证平台ubuntu 18.04
 

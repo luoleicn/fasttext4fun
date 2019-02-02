@@ -3,14 +3,25 @@
 
 #include <Eigen/Dense>
 
-#include "matrix.hpp"
-
-class CPUFTMat : public FTMat {
+class FTMat{
     public:
-        FTMat operator * (FTMat&) = 0;
-        FTMat operator + (FTMat&) = 0;
-        FTMat transpose() = 0;
-        FTMat row() = 0;
+        FTMat(int row, int col);
+        FTMat(float*, int row, int col);
+        FTMat(const FTMat&);
+
+        FTMat operator * (const FTMat&);
+        FTMat operator + (const FTMat&);
+        FTMat operator = (const FTMat&);
+        float operator ()(const int, const int);
+        FTMat transpose();
+        FTMat row(int);
+        int num_row();
+        int num_col();
+        void random_init();
+        void zero_init();
+        void debug();
+    private:
+        FTMat(const Eigen::MatrixXf&);
     private:
         Eigen::MatrixXf m_;
 };
