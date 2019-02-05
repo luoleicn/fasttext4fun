@@ -11,6 +11,7 @@ SET(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")
 set (CMAKE_CXX_STANDARD 11)
 add_definitions(-std=c++11)
 
+#SET(CMAKE_BUILD_TYPE "Release")
 #debug
 set(CUDA_NVCC_FLAGS -G;-g)
 set(CMAKE_BUILD_TYPE Debug)

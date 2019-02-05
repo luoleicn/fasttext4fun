@@ -12,17 +12,17 @@ int main(int args, char** argv)
         exit(-1);
     }
 
-    const char* feature_file = argv[3];
     const char* model_file = argv[1];
     const char* test_file  = argv[2];
+    const char* feature_file = argv[3];
 
     //create model
-    MatFactory* factory  = new CpuMatFactory();
+    MatFactory* factory  = new MatFactory();
     FasttextModel* model = new FasttextModel(feature_file, factory);
     model->load(model_file);
 
     //create evaluator
-    Evaluator* eval = new AccEvaluator();
+    AccEvaluator* eval = new AccEvaluator(model);
 
     //create data reader
     DataLoader* test_data = new DataLoader(test_file);

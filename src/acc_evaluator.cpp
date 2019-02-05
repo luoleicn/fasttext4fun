@@ -1,5 +1,5 @@
-#include "Evaluator.hpp"
-
+#include "evaluator.hpp"
+#include <iostream>
 
 AccEvaluator::AccEvaluator(FasttextModel* model):model_(model) {
 

@@ -51,5 +51,13 @@ TEST(Test_cpu_mat, show) {
     cout << "mat2 random_init :" << endl;
     mat2.random_init();
     mat2.debug();
+
+    cout << "mat2 :" << endl;
+    mat2(0, 0) = 10;
+    mat2.debug();
+
+    FTMat mat7 = relu(mat2);
+    cout << "mat7 :" << endl;
+    mat7.debug();
 }
 

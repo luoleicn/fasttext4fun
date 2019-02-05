@@ -2,6 +2,7 @@
 #define _EVALUATOR_H
 
 #include "data_loader.hpp"
+#include "model.hpp"
 
 class AccEvaluator {
 

@@ -3,6 +3,7 @@
 #ifdef USE_CPU
 
 #include "cpu/cpu_mat.hpp"
+#include "cpu/mat_factory.hpp"
 
 #endif
 
@@ -10,5 +11,6 @@
 #ifndef USE_CPU
 
 #include "gpu/gpu_mat.hpp"
+#include "gpu/mat_factory.hpp"
 
 #endif

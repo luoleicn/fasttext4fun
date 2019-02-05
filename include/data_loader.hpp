@@ -2,6 +2,7 @@
 #define _DATA_LOADER_H
 
 #include <string>
+#include <vector>
 
 typedef struct DataType {
     int label;
@@ -18,6 +19,7 @@ class DataLoader {
         void shuffle();
         DataTypePtr operator [](int);
     private:
+        std::vector<std::string> split(const std::string& s, char delimiter);
         void parseLine(std::string&, DataTypePtr);
     private:
         const char* file_name_;
