@@ -154,9 +154,6 @@ void FTMat::debug() const{
 }
 
 FTMat relu(FTMat& mat) {
-    //debug
-    //return mat;
-
     int rows = mat.num_row();
     int cols = mat.num_col();
 
