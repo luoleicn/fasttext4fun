@@ -68,8 +68,7 @@ http://note.youdao.com/noteshare?id=9de1cacabb533b7fc61723303c4bfb53
 	+ 单词重要性赋权（如tf-idf）
 	+ 去掉不常用词
 	+ 对英文单词做标准化
-+ 目前的层次化分类是人肉标注的，可以利用层次聚类来完成类的层次划分
++ 目前的层次化分类是随机标注的，可以利用层次聚类来完成类的层次划分
 + 支持数据读取和计算的pipline
 + 支持cuda blas
 + 支持python api
-+ 学习下facebook实现
