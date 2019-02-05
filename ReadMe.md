@@ -38,6 +38,9 @@
 + 利用matrix.hpp.in在进行编译时选择相应的cpu或gpu的矩阵计算（如矩阵乘法），可以实现不同计算平台的扩展，相应平台的matrix由相应平台的factory产生
 + 支持不同的optimizer扩展
 
+### 参数更新和代码里的符号意义
+
+http://note.youdao.com/noteshare?id=9de1cacabb533b7fc61723303c4bfb53
 
 ### 依赖
 
