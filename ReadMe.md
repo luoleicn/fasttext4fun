@@ -52,25 +52,17 @@
 
 + 验证平台ubuntu 18.04
 
-### 语料库
-
-http://thuctc.thunlp.org/#%E4%B8%AD%E6%96%87%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB%E6%95%B0%E6%8D%AE%E9%9B%86THUCNews
-
-https://www.sogou.com/labs/resource/cs.php
-
-http://kdd.ics.uci.edu/databases/20newsgroups/20newsgroups.html
-
 ### 入口函数
 
 + 训练
 	+ train.cpp
 + 预测
 	+ test.cpp
-
++ 数据预处理
+	data_process.py
 ### 后续优化 
 
 + 特征工程，更好的文本加工
-	+ 过滤停用词
 	+ 单词重要性赋权（如tf-idf）
 	+ 去掉不常用词
 	+ 对英文单词做标准化
@@ -78,3 +70,4 @@ http://kdd.ics.uci.edu/databases/20newsgroups/20newsgroups.html
 + 支持数据读取和计算的pipline
 + 支持cuda blas
 + 支持python api
++ 学习下facebook实现
